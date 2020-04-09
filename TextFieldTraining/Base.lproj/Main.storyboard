@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16086"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -9,16 +10,79 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="TextFieldTraining" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter a username" textAlignment="center" clearsOnBeginEditing="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="a8a-8n-4td">
+                                <rect key="frame" x="20" y="202" width="374" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                <textInputTraits key="textInputTraits" enablesReturnKeyAutomatically="YES"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Provide a password" textAlignment="center" clearsOnBeginEditing="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="xPD-Hm-vrx">
+                                <rect key="frame" x="20" y="275" width="374" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                <textInputTraits key="textInputTraits" enablesReturnKeyAutomatically="YES"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Provide your phone number" textAlignment="center" clearsOnBeginEditing="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="pgb-jy-YkX">
+                                <rect key="frame" x="20" y="353" width="374" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad" enablesReturnKeyAutomatically="YES" textContentType="tel"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ULg-6H-bqZ">
+                                <rect key="frame" x="20" y="743" width="374" height="38"/>
+                                <color key="backgroundColor" red="0.42745098040000001" green="0.68235294120000001" blue="0.85882352939999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                                <state key="normal" title="Button">
+                                    <color key="titleShadowColor" red="0.42745098040000001" green="0.68235294120000001" blue="0.85882352939999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                </state>
+                                <connections>
+                                    <action selector="buttonAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="o4q-g7-VzA"/>
+                                </connections>
+                            </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="1vl-fH-VLr">
+                                <rect key="frame" x="20" y="507" width="374" height="190"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="190" id="k56-Jd-M51"/>
+                                </constraints>
+                                <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.70980392160000005" green="0.90588235289999997" blue="0.88235294119999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="xPD-Hm-vrx" firstAttribute="leading" secondItem="pgb-jy-YkX" secondAttribute="leading" id="7hl-Oe-6vQ"/>
+                            <constraint firstItem="pgb-jy-YkX" firstAttribute="trailing" secondItem="1vl-fH-VLr" secondAttribute="trailing" id="7sn-cT-hxb"/>
+                            <constraint firstItem="a8a-8n-4td" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="BL6-Y4-UmF"/>
+                            <constraint firstItem="pgb-jy-YkX" firstAttribute="top" secondItem="xPD-Hm-vrx" secondAttribute="bottom" constant="44" id="KTj-uk-YL4"/>
+                            <constraint firstItem="xPD-Hm-vrx" firstAttribute="trailing" secondItem="pgb-jy-YkX" secondAttribute="trailing" id="Syp-Xh-9jL"/>
+                            <constraint firstItem="ULg-6H-bqZ" firstAttribute="top" secondItem="1vl-fH-VLr" secondAttribute="bottom" constant="46" id="aDP-tM-Ahh"/>
+                            <constraint firstItem="a8a-8n-4td" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="cyU-ZF-175"/>
+                            <constraint firstItem="pgb-jy-YkX" firstAttribute="leading" secondItem="1vl-fH-VLr" secondAttribute="leading" id="h4y-G4-M7j"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="ULg-6H-bqZ" secondAttribute="bottom" constant="81" id="lbv-sT-ggD"/>
+                            <constraint firstItem="a8a-8n-4td" firstAttribute="trailing" secondItem="xPD-Hm-vrx" secondAttribute="trailing" id="n6M-3x-9Dv"/>
+                            <constraint firstItem="a8a-8n-4td" firstAttribute="leading" secondItem="xPD-Hm-vrx" secondAttribute="leading" id="o9n-5i-P0f"/>
+                            <constraint firstItem="a8a-8n-4td" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="158" id="oBm-X6-c7A"/>
+                            <constraint firstItem="xPD-Hm-vrx" firstAttribute="top" secondItem="a8a-8n-4td" secondAttribute="bottom" constant="39" id="ood-X9-8Ag"/>
+                            <constraint firstItem="pgb-jy-YkX" firstAttribute="leading" secondItem="ULg-6H-bqZ" secondAttribute="leading" id="tbr-An-xXk"/>
+                            <constraint firstItem="pgb-jy-YkX" firstAttribute="trailing" secondItem="ULg-6H-bqZ" secondAttribute="trailing" id="tiq-uF-mTj"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="contactNumberField" destination="pgb-jy-YkX" id="gIz-2E-bsy"/>
+                        <outlet property="passwordField" destination="xPD-Hm-vrx" id="IHU-Do-L3n"/>
+                        <outlet property="textView" destination="1vl-fH-VLr" id="ndy-6d-g7f"/>
+                        <outlet property="usernameField" destination="a8a-8n-4td" id="ZRA-FC-cAs"/>
+                    </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="137.68115942028987" y="137.94642857142856"/>
         </scene>
     </scenes>
 </document>
